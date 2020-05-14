@@ -6,8 +6,13 @@ div.container
 			div.account-wall
 			form(class='form-signup', action='/join', method='POST')
 				input(type='text', name='name' class='form-control', placeholder='Name', autofocus, required)
-				input(type='text', name='type' class='form-control', placeholder='Type', required)
-				input(type='text', name='username' class='form-control', placeholder='Email/Username',required)
+				p Choose one option below.
+					select(name='type', id='type' class='form-control')
+						option(value = 'Customer') Customer
+						option(value = 'FDSManager') FDSManager
+						option(value = 'RestaurantStaff') RestaurantStaff
+						option(value = 'DeliveryRider') Delivery Riders
+				input(type='text', name='username' class='form-control', placeholder='Email',required)
 				input(type='password', name='password' class='form-control', placeholder='Password', required)
 				button(class='btn btn-lg btn-primary btn-block', type='submit') Join
 				span.clearfix
